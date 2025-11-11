@@ -1,1 +1,1 @@
-# Webpages and for added understanding of modern sites
+# Webpages for added understanding of modern sites
