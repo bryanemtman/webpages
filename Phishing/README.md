@@ -21,3 +21,11 @@ It is to be utilized as a teaching aid and with authorized concent.
 Not completely functional due to using Github pages and not wanting to actually steal crendentials.
 
 The link to the first page sign in page ```/login/index.html``` can be accessed from [here](https://bryanemtman.github.io/webpages/Phishing/login/) but is not routable and wont submit due to no server access.
+
+## Workflow
+
+1. User clicks on link and is taken to ```/login```
+2. User enters their Google email credentials into the input box and submits
+3. The browser attaches the given email and sets it to sessionStorage and is redirected to ```/signin```
+4. User gives their Google password credentials and submits the form, sending the email and password to the API to be logged
+5. The browser is then redirected to the real Google sign in page
