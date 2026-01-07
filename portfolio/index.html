@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e4c2bd1060.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img class="bg-image" src="./images/cyber-security-background-dz8qpz66ryu26ndb.jpg" alt="Background Image">
+        <div class="container">
+            <nav>
+                <div class="icon-wrapper">
+                    <svg 
+                        class="collapse-icon"
+                        width="110" height="100"
+                        viewBox="0 0 110 100"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        role="button"
+                        >
+                        <g class="icon">
+                        <path class="background" d="M0 18C0 8.05888 8.05888 0 18 0H92C101.941 0 110 8.05888 110 18V82C110 91.9411 101.941 100 92 100H18C8.05888 100 0 91.9411 0 82V18Z"/>
+                        <rect class="baseline" x="10" y="81" width="90" height="10" rx="5" fill="#D9D9D9"/>
+                        <g class="arrow-group">
+                        <rect class="bottom-arrow" x="10" y="66" width="60" height="10" rx="5" transform="rotate(-30 10 66)"/>
+                        <rect class="top-arrow" x="61.9615" y="49.6602" width="60" height="10" rx="5" transform="rotate(-150 61.9615 49.6602)"/>
+                        </g>
+                        </g>
+                    </svg>
+                </div>
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas nav-close" onclick="closemenu()">Close</i>
+                </ul>
+                <i class="fas nav-open" onclick="openmenu()">Open</i>
+            </nav>
+            <div class="header-text">
+                <p>Cybersecurity Professional</p>
+                <h1>Hi, I'm <Span>Bryan Emtman</Span></h1>
+            </div>
+        </div>
+    </header>
+    <!--------------About--------------> 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/250325 Emtman B SGT.JPG" alt="Portait">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Cybersecurity professional with hands-on experience and certifications supporting readiness for Cyber Operations roles.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Windows/Linux system administration</span><br>Experienced in configuring, troubleshooting, and maintaining operating systems, user accounts, and Active Directory environments.</li>
+                            <li><span>Python, Bash, and PowerShell scripting</span><br>Developed automation scripts and utilities to streamline tasks, monitor systems, and support cybersecurity lab projects.</li>
+                            <li><span>Network security/Vulnerability assessment</span><br>Skilled in using tools such as Nmap and Metasploit to identify vulnerabilities, assess risks, and support secure network operations.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Oct 2024 - Present &#8212 Motor Transport Operator</span><br>A CO, 602 ASB, 2 CAB, 2ID, Camp Humphreys, SK
+                                <ul>
+                                    <li>&#8226 Enforces safety and maintenance standards for all vehicles and equipment, maintaining 100% accountability and full mission capability across the fleet.</li>
+                                    <li>&#8226 Served as Company Retention NCO and Unit Deterrence Leader, achieving 100% retention rates for FY25 and FY26 and ensuring compliance with Army substance abuse prevention policies.</li>
+                                </ul>
+                            </li>
+                            <li><span>Jan 2021 - Oct 2024 &#8212 Company Communication Representative</span><br>H FSC, 4-70 AR, 1 ABCT, 1 AD, Fort Bliss, TX
+                                <ul>
+                                    <li>&#8226 Served as the Company's S6 representative, maintaining and troubleshooting military communication systems and cryptographic keying material.</li>
+                                    <li>&#8226 Provided Tier 1 Help Desk support, diagnosing and resolving hardware, software, and network issues for 125+ end users.</li>
+                                </ul>
+                            </li>
+                            <li><span>May 2020 - Oct 2024 &#8212 Heavy Vehicle Driver</span><br>H FSC, 4-70 AR, 1 ABCT, 1 AD, Fort Bliss, TX
+                                <ul>
+                                    <li>&#8226 Directed and supervised the safe loading, transportation, and offloading of munitions and cargo in compliance with Army explosive safety and accountability standards.</li>
+                                    <li>&#8226 Managed the receipt, storage, and issue of ammunition, enforcing quality assurance procedures, and maintaining precise inventory control.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Present &#8212 American Public University System</span><br>AS in Cybersecurity (42/60 credits complete) - 3.73 GPA</li>
+                            <li><span>2017 - 2019 &#8212 Eastern Washington University</span><br>BA in General Studies (48/120 credits complete) - 3.49 GPA</li>
+                            <li><span>2015 - 2019 &#8212 Mead Senior High School</span><br>High School Diploma - 3.68 GPA, Honor Role</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>CompTIA Security+ (SY0-701) &#8212 Certified Jan 2026</span><br>Strong foundation in cybersecurity concepts, risk mitigation, secure network operations, and access control.</li>
+                            <li><span>CompTIA Network+ (N10-009) &#8212 Certified Nov 2025</span><br>Skilled in network architecture, troubleshooting, routing/switching fundamentals, and secure communication protocols.</li>
+                            <li><span>CompTIA A+ (220-1101/1102) &#8212 Certified Aug 2025</span><br>Proficient in system configuration, hardware/software troubleshooting, and maintaining secure, reliable Windows and Linux environments.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------Projects----------->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p> Web development projects created to build a deeper understanding of modern website design, user interaction, and input handling. Projects focus on responsive layouts, clean UI design, and how front-end components interact with backend services using common HTTP methods such as GET and POST.</p>
+                    <a href="https://github.com/bryanemtman/webpages" target="_blank" rel="noopener noreferrer">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-terminal"></i>
+                    <h2>Scripting</h2>
+                    <p>Scripting projects developed to enhance automation capabilities and streamline repetitive tasks. These projects involve Bash, PowerShell, and Python scripts designed for system administration, penetration testing, and network monitoring.</p>
+                    <a href="https://github.com/bryanemtman/" target="_blank" rel="noopener noreferrer">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-sitemap"></i>
+                    <h2>Security Labs</h2>
+                    <p>Collection of hands-on cybersecurity labs designed to build practical experience with enterprise systems, network security, and defensive cyber operations.</p>
+                    <a href="https://github.com/bryanemtman/cybersecurity-labs" target="_blank" rel="noopener noreferrer">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------Portfolio----------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/Man-in-the-Middle-Attack-MitM.jpg" alt="MITM">
+                    <div class="layer">
+                        <h3>Network Attack Simulation & Defense Lab</h3>
+                        <p>Designed and implemented a Python-based ARP spoofing and man-in-the-middle (MITM) simulation to demonstrate interception and manipulation of network traffic.</p>
+                        <a href="https://github.com/bryanemtman/Python/tree/main/ARP-Spoofing-MITM" target="_blank" rel="noopener noreferrer" title="Link"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/Screenshot 2025-12-21 124011.png" alt="ICMP">
+                    <div class="layer">
+                        <h3>Covert Channel & Detection Awareness Project</h3>
+                        <p>Developed ICMP-based payload scripts to demonstrate covert data exfiltration through non-traditional network channels. Implemented payload chunking, timing controls, and reassembly logic to simulate real-world evasion techniques.</p>
+                        <a href="https://github.com/bryanemtman/Powershell-Scripts/tree/main/ICMP" target="_blank" rel="noopener noreferrer" title="Link"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/Screenshot 2025-12-21 123558.png" alt="Monitoring">
+                    <div class="layer">
+                        <h3>Windows Security Monitoring & Automation</h3>
+                        <p>Developed PowerShell tools to parse Windows Security Event Logs and enrich failed login attempts with geolocation data. Built a File Integrity Monitoring (FIM) solution using cryptographic hashing to detect unauthorized file or directory changes.</p>
+                        <a href="https://github.com/bryanemtman/Powershell-Scripts/tree/main/Failed-Login-Parser" target="_blank" rel="noopener noreferrer" title="Link"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/bryanemtman/" target="_blank" rel="noopener noreferrer" class="btn">See more</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>bryan.a.emtman.mil@army.mil</p>
+                    <p><i class="fa-solid fa-phone"></i>+82 10 7582-6938</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/bryanemtman/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/bryanemtman/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="./Bryan Emtman Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit <i>(non-functional)</i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Example Portfolio. Made with <i class="fa-solid fa-heart"></i> by Bryan.</p>
+        </div>
+    </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    var autoScroll = document.getElementById("auto-scroll");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0px";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>
