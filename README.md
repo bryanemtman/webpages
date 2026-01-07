@@ -3,4 +3,5 @@ This repository contains web development projects created to build a deeper unde
 
 Current projects include:
 - Portfolio Website – Responsive personal site showcasing projects and skills (very little JS)
+    - Can be accessed [here](https://bryanemtman.github.io/webpages/portfolio/).
 - Mock Login Page – Simulated authentication interface to study form input handling and HTTP request behavior
