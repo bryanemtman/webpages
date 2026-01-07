@@ -20,7 +20,7 @@ It is to be utilized as a teaching aid and with authorized concent.
 
 Not completely functional due to using Github pages and not wanting to actually steal crendentials.
 
-The link to the first page sign in page ```/login/index.html``` can be accessed from [here](https://bryanemtman.github.io/webpages/Phishing/login/) but is not routable and wont submit due to no server access.
+The link to the first sign in page ```/login/index.html``` can be accessed from [here](https://bryanemtman.github.io/webpages/Phishing/login/) but is not routable and wont submit due to no server access.
 
 ## Workflow
 
