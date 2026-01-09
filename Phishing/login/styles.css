@@ -108,6 +108,7 @@ body {
 .page-container {
   width: 100%;
   max-width: 54%;
+  min-width: 840px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -452,4 +453,75 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media only screen and (max-width: 960px) {
+  .page-container {
+    min-width: 480px;
+    
+  }
+
+  .login-box {
+    flex-direction: column;
+    padding: 48px 24px;
+    padding-bottom: 24px;
+    width: 480px;
+    min-height: 528px;
+  }
+
+  .logo-and-title,
+  .login-form {
+    max-width: 100%;
+    flex-basis: auto;
+    margin: 0;
+  }
+
+  .login-form {
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+
+  .submit-section {
+    justify-content: space-between;
+  }
+
+  .bottom-bar {
+    width: 480px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  body {
+    background: var(--white);
+  }
+
+  .page-container {
+    min-width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .login-box {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+
+  .logo-and-title {
+    margin-top: -32px;
+    flex-grow: 0;
+  }
+
+  .submit-section .signup-button {
+    position: relative;
+    padding: 6px;
+
+  }
+
+  .bottom-bar {
+    position: fixed;
+    bottom: 1rem;
+    width: 100%;
+  }
 }
