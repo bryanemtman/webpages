@@ -15,7 +15,6 @@
                 <div class="icon-wrapper">
                     <svg 
                         class="collapse-icon"
-                        width="110" height="100"
                         viewBox="0 0 110 100"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +38,7 @@
                     <li><a href="#contact">Contact</a></li>
                     <i class="fas nav-close" onclick="closemenu()">Close</i>
                 </ul>
-                <i class="fas nav-open" onclick="openmenu()">Menu</i>
+                <i id="menu-open" class="fas nav-open" onclick="openmenu()">Menu</i>
             </nav>
             <div class="header-text">
                 <p>Cybersecurity Professional</p>
@@ -176,8 +175,8 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope"></i>example@email.com</p>
-                    <p><i class="fa-solid fa-phone"></i>+1 (123) 456-7890</p>
+                    <p><i class="fa-solid fa-envelope"></i>bryan.a.emtman.mil@army.mil</p>
+                    <p><i class="fa-solid fa-phone"></i>+82 10 7582-6938</p>
                     <div class="social-icons">
                         <a href="https://github.com/bryanemtman/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
                         <a href="https://linkedin.com/in/bryanemtman/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
@@ -214,12 +213,15 @@
     }
 </script>
 <script>
+    var menuOpen = document.getElementById("menu-open");
     var sidemenu = document.getElementById("sidemenu");
     function openmenu(){
         sidemenu.style.right = "0px";
+        menuOpen.style.display = "none";
     }
     function closemenu(){
         sidemenu.style.right = "-200px";
+        menuOpen.style.display = "block";
     }
 </script>
 </body>
