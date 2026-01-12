@@ -564,14 +564,14 @@ nav .fas {
     }
 
     nav ul {
-        background-color: var(--blue);
+        background-color: rgb(from var(--blue) r g b / 0.9);
         position: fixed;
         top: 0;
         right: -200px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
-        z-index: 2;
+        z-index: 99;
         transition: 0.5s;
     }
 
@@ -631,4 +631,3 @@ nav .fas {
         font-size: 14px;
     }
 }
-
