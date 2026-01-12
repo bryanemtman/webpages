@@ -542,7 +542,7 @@ nav .fas {
 
 @media only screen and (max-width: 600px){    
     header {
-        height: 45vh;
+        height: 50vh;
     }
 
     .header-text {
@@ -631,3 +631,4 @@ nav .fas {
         font-size: 14px;
     }
 }
+
